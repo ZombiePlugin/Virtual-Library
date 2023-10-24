@@ -13,11 +13,14 @@ class Book extends Media {
   }
   static highestRating(arrOfBooks) {
     let currentRating = 0;
+    let longestBook;
     for (let i = 0; i < arrOfBooks.length; i++) {
       if (arrOfBooks[i].rating > currentRating) {
         currentRating = arrOfBooks[i].rating;
+        longestBook = arrOfBooks[i];
       }
     }
+    return longestBook;
   }
 }
 // don't change below
